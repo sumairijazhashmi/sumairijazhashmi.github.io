@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: "Some may call this junk. Me, I call them treasures." ~Skyrim NPC
+description: Some may call this junk. Me, I call them treasures. ~Skyrim NPC
 nav: true
 nav_order: 3
 ---
