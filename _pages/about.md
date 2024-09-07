@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Get in touch at <a href="suha00001@stud.uni-saarland.de">suha00001@stud.uni-saarland.de</a>
+subtitle: Get in touch at <a href="mailto:suha00001@stud.uni-saarland.de">suha00001@stud.uni-saarland.de</a>
 
 profile:
   align: right
