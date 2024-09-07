@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-# subtitle: <a href='https://cispa.de/en'>CISPA Helmholtz Center for Information Security</a>. 
+subtitle: Get in touch at <a href="suha00001@stud.uni-saarland.de">suha00001@stud.uni-saarland.de</a>
 
 profile:
   align: right

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: Repositories
 description: Some may call this junk. Me, I call them treasures. ~Skyrim NPC
 nav: true
 nav_order: 3
