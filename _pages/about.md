@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Get in touch at <a href="mailto:suha00001@stud.uni-saarland.de">suha00001@stud.uni-saarland.de</a>
+subtitle: 
 
 profile:
   align: right
@@ -23,3 +23,5 @@ I'm a computer scientist, researcher, and currently a PhD student at the <a href
 My research focuses on Usable Security and Privacy, where I use data science, human-computer interaction, and social science methods to understand and solve the challenges users face. I am particularly interested in finding ways to help marginalized and at-risk communities with their digital safety, privacy, and security.
 
 Apart from work, I love cooking, swimming, learning about history, and I vibe to just about anything that seems fun.
+
+<strong>Get in touch at <a href="mailto:suha00001@stud.uni-saarland.de">suha00001@stud.uni-saarland.de</a></strong>
