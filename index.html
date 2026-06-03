@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <title>Sumair Ijaz Hashmi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+
+:root {
+  --lilac-50:  #fff7f2;
+  --lilac-100: #ffe8d6;
+  --lilac-200: #ffc9a0;
+  --lilac-400: #f48b3e;
+  --lilac-500: #e8721e;
+  --lilac-600: #d45f0a;
+  --lilac-700: #a84a08;
+  --lilac-900: #4a1f03;
+  --text:      #1e1208;
+  --muted:     #6b3d18;
+  /* --border:    #ffd4b0; */
+  --border:    #f0e0d0;
+  /* --bg:        #fffaf6; */
+  --bg:        #ffffff;
+  --white:     #ffffff;
+  --tag-bg:    #ffe8d6;
+  --tag-text:  #a84a08;
+}
+    /* :root {
+      --lilac-50:  #faf4fe;
+      --lilac-100: #f3e8ff;
+      --lilac-200: #d8b4fe;
+      --lilac-400: #a855f7;
+      --lilac-500: #9333ea;
+      --lilac-600: #7e22ce;
+      --lilac-700: #6b21a8;
+      --lilac-900: #3b0764;
+      --text:      #1c1c2e;
+      --muted:     #57406a;
+      --border:    #e9d5ff;
+      --bg:        #fdf9ff;
+      --white:     #ffffff;
+      --tag-bg:    #f3e8ff;
+      --tag-text:  #6b21a8;
+    } */
+
+    /* :root {
+  --lilac-50:  #fdf9ee;
+  --lilac-100: #fdf3d7;
+  --lilac-200: #f7dfa0;
+  --lilac-400: #d4a843;
+  --lilac-500: #c49a2a;
+  --lilac-600: #b8860b;
+  --lilac-700: #8c6508;
+  --lilac-900: #3d2c03;
+  --text:      #1e1a0e;
+  --muted:     #6b5520;
+  --border:    #f0d898;
+  --bg:        #fefcf4;
+  --white:     #ffffff;
+  --tag-bg:    #fdf3d7;
+  --tag-text:  #8c6508;
+} */
+
+    /* :root {
+  --lilac-50:  #f4f7f4;
+  --lilac-100: #e0ece2;
+  --lilac-200: #c0d6c4;
+  --lilac-400: #9ab5a0;
+  --lilac-500: #7a9e82;
+  --lilac-600: #6b8f71;
+  --lilac-700: #4d6e53;
+  --lilac-900: #253429;
+  --text:      #161e18;
+  --muted:     #4a6150;
+  --border:    #c8dccb;
+  --bg:        #f7faf7;
+  --white:     #ffffff;
+  --tag-bg:    #e0ece2;
+  --tag-text:  #4d6e53;
+} */
+
+    /* :root {
+  --lilac-50:  #f2f7f4;
+  --lilac-100: #d4edda;
+  --lilac-200: #a3d4b0;
+  --lilac-400: #4a8c5c;
+  --lilac-500: #3a7a4a;
+  --lilac-600: #2d5a3d;
+  --lilac-700: #1e3d28;
+  --lilac-900: #0d1f14;
+  --text:      #111a14;
+  --muted:     #3a5a42;
+  --border:    #c0ddc8;
+  --bg:        #f6faf7;
+  --white:     #ffffff;
+  --tag-bg:    #d4edda;
+  --tag-text:  #1e3d28;
+} */
+
+    /* :root {
+  --lilac-50:  #fdf6f4;
+  --lilac-100: #f7ded8;
+  --lilac-200: #f0b9ab;
+  --lilac-400: #e8927c;
+  --lilac-500: #d4674e;
+  --lilac-600: #c1694f;
+  --lilac-700: #a0432e;
+  --lilac-900: #5c1f10;
+  --text:      #1e1410;
+  --muted:     #6b3d2e;
+  --border:    #f0c4b8;
+  --bg:        #fdf8f6;
+  --white:     #ffffff;
+  --tag-bg:    #f7ded8;
+  --tag-text:  #a0432e;
+} */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253,249,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.5rem, 6vw, 5rem);
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: var(--lilac-700);
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--lilac-600); }
+
+    .nav-links a.active { font-weight: 500; }
+
+    /* ── SECTIONS ── */
+    main section {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 70px;
+    }
+
+    main section:last-of-type { border-bottom: none; }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 6vw, 3rem);
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    h2.section-label {
+      font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+      letter-spacing: 0.01em;
+      margin-bottom: 2.25rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 3px solid var(--lilac-400);
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    p { color: var(--muted); margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    a { color: var(--lilac-600); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── HERO ── */
+    #about {
+      padding-top: 6rem;
+      padding-bottom: 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: min(380px, 40vw) 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-role {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--lilac-500);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-market-note {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--lilac-700);
+      margin-bottom: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .hero-bio { font-size: 1.05rem; line-height: 1.8; }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.8rem;
+    }
+
+    .pub-me { font-weight: 500; color: var(--text); }
+
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1.1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-arrow {
+      font-size: 1em;
+      line-height: 1;
+    }
+
+    .btn-primary {
+      background: var(--lilac-500);
+      color: var(--white);
+      border: 1px solid var(--lilac-500);
+    }
+
+    .btn-primary:hover {
+      background: var(--lilac-700);
+      border-color: var(--lilac-700);
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--lilac-600);
+      border: 1px solid var(--lilac-400);
+    }
+
+    .btn-outline:hover {
+      background: var(--lilac-100);
+      text-decoration: none;
+    }
+
+    .avatar {
+      width: min(380px, 40vw);
+      height: min(380px, 40vw);
+      border-radius: 50%;
+      background: var(--lilac-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      color: var(--lilac-700);
+      flex-shrink: 0;
+      border: 3px solid var(--lilac-100);
+    }
+
+    /* ── PUBLICATIONS ── */
+    .pub-list { display: flex; flex-direction: column; gap: 2rem; }
+
+    .pub-item {
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .pub-item:hover {
+      border-color: var(--lilac-400);
+      box-shadow: 0 2px 16px rgba(139, 112, 232, 0.08);
+    }
+
+    .pub-venue {
+      font-size: 0.8rem;
+      color: var(--lilac-500);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .pub-authors {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.9rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 40px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    .pub-award {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--lilac-700);
+      background: var(--lilac-100);
+      border: 1px solid var(--lilac-200);
+      padding: 0.15rem 0.6rem;
+      border-radius: 40px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      padding: 0.2rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .pill-link:hover {
+      border-color: var(--lilac-500);
+      color: var(--lilac-600);
+      text-decoration: none;
+    }
+
+    /* ── CV ── */
+    .cv-block { margin-bottom: 2.8rem; }
+    .cv-block:last-child { margin-bottom: 0; }
+
+    .cv-subtitle {
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--lilac-500);
+      margin-bottom: 1.2rem;
+    }
+
+    .cv-entry {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .cv-year {
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding-top: 0.1rem;
+      font-weight: 300;
+    }
+
+    .cv-entry h3 { margin-bottom: 0.1rem; }
+
+    .cv-entry p {
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+      line-height: 1.5;
+    }
+
+    .cv-entry p.inst {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .cv-download {
+      margin-top: 2rem;
+    }
+
+    /* ── UX PROJECTS ── */
+    .ux-projects-note {
+      margin-top: 1.75rem;
+      padding: 1.1rem 1.25rem;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--muted);
+      background: var(--lilac-50);
+      border: 1px solid var(--lilac-100);
+      border-radius: 10px;
+    }
+
+    .ux-projects-note a {
+      font-weight: 500;
+    }
+
+    .project-list { display: flex; flex-direction: column; gap: 1rem; }
+
+    .project-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .project-item.open { border-color: var(--lilac-400); }
+
+    .project-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.4rem 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+    }
+
+    .project-header:hover { background: var(--lilac-50); }
+
+    .project-meta { flex: 1; min-width: 0; }
+
+    .project-meta h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      color: var(--text);
+    }
+
+    .project-meta p {
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .project-chevron {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--lilac-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s, background 0.2s;
+    }
+
+    .project-chevron svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--lilac-600);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .project-item.open .project-chevron {
+      transform: rotate(180deg);
+      background: var(--lilac-200);
+    }
+
+    .project-deck {
+      display: none;
+      border-top: 1px solid var(--border);
+      background: var(--lilac-50);
+      padding: 1.5rem;
+    }
+
+    .project-item.open .project-deck { display: block; }
+
+    .slide-viewer {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .slide-frame {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+
+    .slide-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .slide-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #f8f8f8;
+    }
+
+    .slide-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .slide-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .slide-btn:hover:not(:disabled) {
+      border-color: var(--lilac-400);
+      background: var(--lilac-100);
+    }
+
+    .slide-btn:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+
+    .slide-btn svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--lilac-700);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .slide-counter {
+      font-size: 0.82rem;
+      color: var(--muted);
+      min-width: 4rem;
+      text-align: center;
+    }
+
+    .deck-pdf-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .deck-pdf-link a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .deck-pdf-link a:hover {
+      color: var(--lilac-600);
+      text-decoration: underline;
+    }
+
+    .project-item--review .project-meta {
+      filter: blur(6px);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .project-status-tag {
+      flex-shrink: 0;
+      align-self: center;
+      background: var(--lilac-100);
+      color: var(--lilac-700);
+      border: 1px solid var(--lilac-200);
+    }
+
+    .project-deck-locked {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .project-deck-blur {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--lilac-100) 0%, var(--lilac-200) 40%, var(--border) 100%);
+      filter: blur(2px);
+      transform: scale(1.05);
+    }
+
+    .project-deck-blur::before,
+    .project-deck-blur::after {
+      content: '';
+      position: absolute;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .project-deck-blur::before {
+      top: 12%;
+      left: 8%;
+      width: 55%;
+      height: 18%;
+    }
+
+    .project-deck-blur::after {
+      bottom: 15%;
+      right: 10%;
+      width: 40%;
+      height: 35%;
+    }
+
+    .project-review-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--lilac-700);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(4px);
+      margin: 0;
+    }
+
+    .project-deck-empty {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      background: var(--white);
+      border: 1px dashed var(--lilac-200);
+      border-radius: 10px;
+    }
+
+    .project-deck-empty p {
+      font-size: 0.92rem;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* ── PRESS ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .blog-card {
+      padding: 1.4rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s, background 0.2s;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+    }
+
+    .blog-card::after {
+      content: 'Open ↗';
+      display: block;
+      margin-top: 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--lilac-400);
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .blog-card:hover {
+      border-color: var(--lilac-500);
+      background: var(--lilac-50);
+      box-shadow: 0 6px 24px rgba(232, 114, 30, 0.14);
+      transform: translateY(-3px);
+      text-decoration: none;
+    }
+
+    .blog-card:hover::after {
+      color: var(--lilac-600);
+      transform: translate(2px, -1px);
+    }
+
+    .blog-card:hover h3 {
+      color: var(--lilac-700);
+    }
+
+    .blog-date {
+      font-size: 0.78rem;
+      color: var(--lilac-400);
+      margin-bottom: 0.5rem;
+    }
+
+    .press-type {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--lilac-600);
+      margin-bottom: 0.35rem;
+    }
+
+    .blog-card h3 { color: var(--text); margin-bottom: 0.4rem; font-size: 0.98rem; }
+    .blog-card p  { font-size: 0.88rem; margin: 0; line-height: 1.6; }
+
+    .blog-card .press-award {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--lilac-700);
+      background: var(--lilac-100);
+      border: 1px solid var(--lilac-200);
+      padding: 0.15rem 0.6rem;
+      border-radius: 40px;
+      margin-top: 0.6rem;
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--lilac-100);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--lilac-600);
+      fill: none;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--lilac-400);
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-value { font-size: 0.95rem; color: var(--text); font-weight: 400; }
+
+    .contact-blurb {
+      padding: 1.8rem;
+      background: var(--lilac-50);
+      border-radius: 16px;
+      border: 1px solid var(--lilac-100);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    .accent-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--lilac-400);
+      vertical-align: middle;
+      margin: 0 0.5rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 760px) {
+      .hero-grid     { grid-template-columns: 1fr; }
+      .avatar        { width: min(220px, 60vw); height: min(220px, 60vw); }
+      .blog-grid     { grid-template-columns: 1fr; }
+      .contact-grid  { grid-template-columns: 1fr; }
+      .cv-entry      { grid-template-columns: 1fr; gap: 0.2rem; }
+      .nav-links     { gap: 0.8rem; flex-wrap: wrap; justify-content: flex-end; }
+      .nav-links a   { font-size: 0.75rem; }
+      nav            { height: auto; min-height: 60px; padding-top: 0.6rem; padding-bottom: 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#about" data-tab="about">Sumair Ijaz Hashmi</a>
+    <ul class="nav-links">
+      <li><a href="#about" data-tab="about" class="active">About</a></li>
+      <li><a href="#ux-projects" data-tab="ux-projects">UX Projects</a></li>
+      <li><a href="#publications" data-tab="publications">Research Publications</a></li>
+      <li><a href="#press" data-tab="press">Press</a></li>
+      <li><a href="#contact" data-tab="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+  <!-- ABOUT -->
+  <section id="about" class="tab-panel">
+    <div class="container">
+      <div class="hero-grid">
+        <img src="photo.jpeg" alt="Sumair Ijaz Hashmi" class="avatar" style="object-fit:cover; width:100%; height:auto; aspect-ratio:1/1;" />
+
+        <div>
+          <h1>Sumair Ijaz Hashmi</h1>
+
+          <p class="hero-role">Doctoral Researcher at CISPA Helmholtz Center for Information Security</p>
+          <p class="hero-market-note">💼 On the job market for industry and academic internships.</p>
+          <p class="hero-bio" style="margin-top:1.2rem;">
+            I am an <strong style="color:var(--text);font-weight:500;">interdisciplinary HCI researcher</strong> working on security, privacy, and safety. My current work focuses on the accessibility of security technology for low socioeconomic populations, aiming to redesign security systems around the practices and realities of the people they are supposed to serve.
+          </p>
+          <p class="hero-bio">
+            I am currently advised by the amazing <a href="https://cispa.de/en/people/katharina.krombholz">Katharina Krombholz</a>.  Before my PhD, I was a Bachelors student at <a href="https://www.lums.edu.pk">LUMS, Pakistan</a> where I was advised by <a href="https://web.lums.edu.pk/~mobin/index.html">Mobin Javed</a> .
+          </p>
+          <div class="hero-links">
+            <a class="btn btn-primary" href="#contact" data-tab="contact">Get in touch</a>
+            <a class="btn btn-outline" href="cv.pdf" target="_blank" rel="noopener noreferrer">CV <span class="btn-arrow" aria-hidden="true">↓</span></a>
+            <a class="btn btn-outline" href="https://scholar.google.com/citations?user=4kyx2qMAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/sumair-ijaz-hashmi-18b992223/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UX PROJECTS -->
+  <section id="ux-projects" class="tab-panel">
+    <div class="container">
+      <h2 class="section-label">UX Projects</h2>
+
+      <div class="project-list">
+
+        <!-- <article class="project-item project-item--review">
+          <button class="project-header" type="button" aria-expanded="false">
+            <div class="project-meta" aria-hidden="true">
+              <h3>UX Project 1</h3>
+              <p>Project description placeholder for work currently under review.</p>
+              <div class="project-tags">
+                <span class="tag">HCI</span>
+                <span class="tag">Research</span>
+              </div>
+            </div>
+            <span class="tag project-status-tag">Under review</span>
+            <span class="project-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="project-deck">
+            <div class="project-deck-locked">
+              <div class="project-deck-blur" aria-hidden="true"></div>
+              <p class="project-review-label">Under review</p>
+            </div>
+          </div>
+        </article> -->
+<!-- 
+        <article class="project-item project-item--review">
+          <button class="project-header" type="button" aria-expanded="false">
+            <div class="project-meta" aria-hidden="true">
+              <h3>UX Project 2</h3>
+              <p>Project description placeholder for work currently under review.</p>
+              <div class="project-tags">
+                <span class="tag">Security</span>
+                <span class="tag">Design</span>
+              </div>
+            </div>
+            <span class="tag project-status-tag">Under review</span>
+            <span class="project-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="project-deck">
+            <div class="project-deck-locked">
+              <div class="project-deck-blur" aria-hidden="true"></div>
+              <p class="project-review-label">Under review</p>
+            </div>
+          </div>
+        </article> -->
+
+        <article class="project-item" id="project-3">
+          <button class="project-header" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <h3>Training Users to Recognize Persuasion Techniques in Scam Calls</h3>
+              <p>A persuasion-principles training intervention deployed via WhatsApp that teaches users to recognize social engineering tactics in vishing calls, tested on 100 university students in Pakistan.</p>
+              <div class="project-tags">
+                <span class="tag">Scam Calls</span>
+                <span class="tag">Experimental Study</span>
+              </div>
+            </div>
+            <span class="project-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="project-deck">
+            <div class="slide-viewer" data-slides='["slides/project3/1.png","slides/project3/2.png","slides/project3/3.png","slides/project3/4.png","slides/project3/5.png"]'>
+              <div class="slide-frame">
+                <img src="slides/project3/1.png" alt="Slide 1 — Training Users to Recognize Persuasion Techniques in Scam Calls" />
+              </div>
+              <div class="slide-controls">
+                <button class="slide-btn slide-prev" type="button" aria-label="Previous slide">
+                  <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span class="slide-counter">1 / 5</span>
+                <button class="slide-btn slide-next" type="button" aria-label="Next slide">
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <p class="deck-pdf-link">
+                <a href="slides/project3/vishing_project.pdf" target="_blank" rel="noopener noreferrer">Open full deck as PDF ↗</a>
+              </p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="ux-projects-note">
+        Additional UX projects are currently under review. Please
+        <a href="mailto:sumair.hashmi@cispa.de">contact me</a>
+        directly if you would like access to their slide decks.
+      </p>
+    </div>
+  </section>
+
+  <!-- RESEARCH PUBLICATIONS -->
+  <section id="publications" class="tab-panel">
+    <div class="container">
+      <h2 class="section-label">Research Publications</h2>
+
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <p class="pub-venue">NDSS 2026</p>
+          <h3>Mapping the Cloud: A Mixed-Methods Study of Cloud Security and Privacy Configuration Challenges</h3>
+          <p class="pub-authors"><span class="pub-me">Sumair Ijaz Hashmi</span>*, Shafay Kashif,* Lea Gröber, Katharina Krombholz, Mobin Javed. (* denotes equal contribution)</p>
+          <div class="pub-links">
+            <a class="pill-link" href="https://www.ndss-symposium.org/wp-content/uploads/2026-f1302-paper.pdf" target="_blank">PDF</a>
+            <a class="pill-link" href="https://www.youtube.com/watch?v=vEP00Tt4YoM&feature=youtu.be" target="_blank">Talk ▶</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <p class="pub-venue">ACM CHI 2025 <span class="pub-award">★ Honourable Mention</span></p>
+          <h3>Understanding the Security Advice Mechanisms of Low Socioeconomic Pakistanis</h3>
+          <p class="pub-authors"><span class="pub-me">Sumair Ijaz Hashmi</span>*, Rimsha Sarfaraz*, Lea Gröber, Mobin Javed, Katharina Krombholz.  (* denotes equal contribution)</p>
+          <div class="pub-links">
+            <a class="pill-link" href="https://dl.acm.org/doi/full/10.1145/3706598.3713297" target="_blank">PDF</a>
+            <a class="pill-link" href="https://www.youtube.com/watch?v=PihhYUnPwls" target="_blank">Talk ▶</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <p class="pub-venue">Usenix Security 2025</p>
+          <h3>Understanding How Users Prepare for and React to Smartphone Theft</h3>
+          <p class="pub-authors">Divyanshu Bhardwaj, <span class="pub-me">Sumair Ijaz Hashmi</span>, Katharina Krombholz, Maximilian Golla.</p>
+          <div class="pub-links">
+            <a class="pill-link" href="https://www.usenix.org/system/files/usenixsecurity25-bhardwaj.pdf" target="_blank">PDF</a>
+            <a class="pill-link" href="https://www.youtube.com/watch?v=095gattnh0U" target="_blank">Talk ▶</a>
+            <a class="pill-link" href="https://www.youtube.com/watch?v=6fO5YcsMfRE" target="_blank">Talk at Microsoft Research ▶</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <p class="pub-venue">Extended Abstracts at ACM CHI 2023</p>
+          <h3>Training Users to Recognize Persuasion Techniques in Vishing Calls</h3>
+          <p class="pub-authors"><span class="pub-me">Sumair Ijaz Hashmi</span>*, Niklas George*, Eimaan Saqib, Fatima Ali, Nawaal Siddique, Shafay Kashif, Shahzaib Ali, Nida ul Habib Bajwa, Mobin Javed. (* denotes equal contribution) </p>
+          <div class="pub-links">
+            <a class="pill-link" href="https://dl.acm.org/doi/full/10.1145/3544549.3585823" target="_blank">PDF</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section id="press" class="tab-panel">
+    <div class="container">
+      <h2 class="section-label">Press</h2>
+
+      <div class="blog-grid">
+
+        <a class="blog-card" href="https://pulse.internetsociety.org/en/blog/2026/05/mapping-community-responses-to-cloud-security-misconfigurations/" target="_blank" rel="noopener noreferrer">
+          <p class="press-type">News article</p>
+          <p class="blog-date">May 2026 · Internet Society Pulse</p>
+          <h3>Mapping Community Responses to Cloud Security Misconfigurations</h3>
+          <p>Guest blog post on human-centric cloud security research, drawing on our NDSS 2026 study of 251K Stack Overflow posts on configuration challenges.</p>
+        </a>
+
+        <a class="blog-card" href="https://dl.acm.org/doi/full/10.1145/3706598.3713297" target="_blank" rel="noopener noreferrer">
+          <p class="press-type">Award</p>
+          <p class="blog-date">ACM CHI 2025</p>
+          <h3>Honourable Mention for Best Paper</h3>
+          <p><em>Understanding the Security Advice Mechanisms of Low Socioeconomic Pakistanis</em></p>
+          <span class="press-award">★ Honourable Mention</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="tab-panel">
+    <div class="container">
+      <h2 class="section-label">Get in touch</h2>
+
+      <div class="contact-grid">
+        <div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">Email</p>
+              <p class="contact-value"><a href="mailto:sumair.hashmi@cispa.de">sumair.hashmi@cispa.de</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <p class="contact-value"><a href="https://www.linkedin.com/in/sumair-ijaz-hashmi-18b992223/" target="_blank" rel="noopener noreferrer">sumair-ijaz-hashmi</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">GitHub</p>
+              <p class="contact-value"><a href="https://github.com/sumairijazhashmi" target="_blank" rel="noopener noreferrer">sumairijazhashmi</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">Research group</p>
+              <p class="contact-value"><a href="https://cispa.de/en/research/groups/krombholz" target="_blank" rel="noopener noreferrer">Krombholz Group, CISPA</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-blurb">
+          <h2 style="font-size:1.15rem;margin-bottom:0.8rem;">Open to collaboration</h2>
+          <p style="font-size:0.92rem;">I'm happy to chat about research, potential collaborations, or questions about my work. Feel free to reach out.</p>
+          <div style="margin-top:1.4rem;">
+            <a class="btn btn-primary" href="mailto:sumair.hashmi@cispa.de">Email me</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 by Sumair</span>
+    <span class="accent-dot"></span>
+    <span>CISPA</span>
+  </footer>
+
+  <script>
+    (function () {
+      document.querySelectorAll('.project-item').forEach(function (item) {
+        var header = item.querySelector('.project-header');
+        header.addEventListener('click', function () {
+          var isOpen = item.classList.contains('open');
+          document.querySelectorAll('.project-item.open').forEach(function (openItem) {
+            if (openItem !== item) {
+              openItem.classList.remove('open');
+              openItem.querySelector('.project-header').setAttribute('aria-expanded', 'false');
+            }
+          });
+          item.classList.toggle('open', !isOpen);
+          header.setAttribute('aria-expanded', String(!isOpen));
+
+          if (!isOpen) {
+            var iframe = item.querySelector('iframe[data-src]');
+            if (iframe && (!iframe.getAttribute('src') || iframe.getAttribute('src') === 'about:blank')) {
+              iframe.src = iframe.dataset.src;
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll('.slide-viewer[data-slides]').forEach(function (viewer) {
+        var slides = JSON.parse(viewer.dataset.slides);
+        var img = viewer.querySelector('img');
+        var counter = viewer.querySelector('.slide-counter');
+        var prevBtn = viewer.querySelector('.slide-prev');
+        var nextBtn = viewer.querySelector('.slide-next');
+        var index = 0;
+
+        function render() {
+          img.src = slides[index];
+          img.alt = 'Slide ' + (index + 1);
+          counter.textContent = (index + 1) + ' / ' + slides.length;
+          prevBtn.disabled = index === 0;
+          nextBtn.disabled = index === slides.length - 1;
+        }
+
+        prevBtn.addEventListener('click', function () {
+          if (index > 0) { index--; render(); }
+        });
+
+        nextBtn.addEventListener('click', function () {
+          if (index < slides.length - 1) { index++; render(); }
+        });
+
+        render();
+      });
+
+      var tabs = document.querySelectorAll('[data-tab]');
+      var sectionIds = ['about', 'ux-projects', 'publications', 'press', 'contact'];
+
+      function setActiveTab(id) {
+        tabs.forEach(function (link) {
+          link.classList.toggle('active', link.dataset.tab === id);
+        });
+      }
+
+      function scrollToTab(id) {
+        var section = document.getElementById(id);
+        if (!section) return;
+        section.scrollIntoView({ behavior: 'smooth' });
+        history.replaceState(null, '', '#' + id);
+        setActiveTab(id);
+      }
+
+      tabs.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          scrollToTab(link.dataset.tab);
+        });
+      });
+
+      function updateActiveFromScroll() {
+        var offset = window.scrollY + 90;
+        var current = sectionIds[0];
+        sectionIds.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el && el.offsetTop <= offset) current = id;
+        });
+        setActiveTab(current);
+      }
+
+      window.addEventListener('scroll', updateActiveFromScroll, { passive: true });
+      updateActiveFromScroll();
+
+      var hash = location.hash.slice(1);
+      if (hash && document.getElementById(hash)) {
+        requestAnimationFrame(function () {
+          document.getElementById(hash).scrollIntoView();
+          setActiveTab(hash);
+        });
+      }
+
+    })();
+  </script>
+
+</body>
+</html>
